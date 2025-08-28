@@ -1,0 +1,187 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; padding: 0;
+  background-color: #fff8f0;
+}
+header {
+  background-color: #e67e22;
+  color: white;
+  padding: 12px 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  display: flex;
+}
+nav button {
+  background-color: #d35400;
+  border: none;
+  padding: 10px 18px;
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: 600;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+nav button:hover, nav button.active {
+  background-color: #b34700;
+}
+main {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+#categoryMenu {
+  max-width: 1100px;
+  margin: 10px auto;
+  padding: 0 15px;
+  text-align: center;
+}
+.category-btn {
+  background-color: #d35400;
+  border: none;
+  padding: 6px 12px;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 0 5px 10px 5px;
+  transition: background-color 0.3s;
+  font-weight: 600;
+  display: inline-block;
+}
+.category-btn:hover {
+  background-color: #b34700;
+}
+.category-btn.active {
+  background-color: #7f2f00;
+}
+.category {
+  margin-bottom: 40px;
+}
+.category h2 {
+  border-bottom: 3px solid #d35400;
+  padding-bottom: 5px;
+  color: #d35400;
+  margin-bottom: 20px;
+}
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 18px;
+}
+.food-item {
+  background: #fff3e0;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 1px 1px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.food-item img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.food-item h3 {
+  margin: 10px 0 6px;
+  font-size: 1.3rem;
+}
+.food-item p.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d35400;
+  margin: 10px 0 15px;
+}
+button.add-btn {
+  background-color: #e67e22;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+button.add-btn:hover {
+  background-color: #c45a00;
+}
+/* Cart & Billing Styles */
+#cartPage, #billingPage {
+  display: none;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff3e0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 1px 1px 8px rgba(0,0,0,0.1);
+}
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #d35400;
+}
+th {
+  background-color: #d35400;
+  color: white;
+}
+input.qty {
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #d35400;
+}
+button.remove-btn {
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+button.remove-btn:hover {
+  background-color: #962d22;
+}
+#total, #billingTotal {
+  margin-top: 15px;
+  font-size: 1.4rem;
+  text-align: right;
+  font-weight: 700;
+  color: #d35400;
+}
+button#clearCart, button#proceedToBilling, button#payNow, button#backToCart {
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  float: right;
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+button#clearCart:hover, button#proceedToBilling:hover, button#payNow:hover, button#backToCart:hover {
+  background-color: #962d22;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

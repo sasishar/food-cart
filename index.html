@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Indian Food Ordering System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  Indian Food Ordering System
+  <nav>
+    <button id="viewAllBtn" class="active">Menu</button>
+    <button id="viewVegBtn">Veg</button>
+    <button id="viewNonVegBtn">Non-Veg</button>
+    <button id="viewCartBtn">Cart (<span id="cartCount">0</span>)</button>
+  </nav>
+</header>
+
+<div id="categoryMenu">
+  <button class="category-btn active" data-category="All" onclick="filterByCategory('All')">All</button>
+  <button class="category-btn" data-category="Starters" onclick="filterByCategory('Starters')">Starters</button>
+  <button class="category-btn" data-category="Main Course" onclick="filterByCategory('Main Course')">Main Course</button>
+  <button class="category-btn" data-category="Biryanis" onclick="filterByCategory('Biryanis')">Biryanis</button>
+  <button class="category-btn" data-category="Desserts" onclick="filterByCategory('Desserts')">Desserts</button>
+  <button class="category-btn" data-category="Soft Drinks" onclick="filterByCategory('Soft Drinks')">Soft Drinks</button>
+  <button class="category-btn" data-category="Ice Creams" onclick="filterByCategory('Ice Creams')">Ice Creams</button>
+</div>
+
+<main>
+  <section id="menuPage"></section>
+  <section id="cartPage">
+    <h2>Your Cart</h2>
+    <table id="cartTable">
+      <thead>
+        <tr>
+          <th>Dish</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Total</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="total">Total: ₹0.00</div>
+    <button id="clearCart">Clear Cart</button>
+    <button id="proceedToBilling">Proceed to Billing</button>
+  </section>
+  <section id="billingPage">
+    <h2>Billing</h2>
+    <table id="billingTable">
+      <thead>
+        <tr>
+          <th>Dish</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="billingTotal">Total Amount: ₹0.00</div>
+    <button id="payNow">Pay Now</button>
+    <button id="backToCart">Back to Cart</button>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
