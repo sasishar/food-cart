@@ -185,3 +185,66 @@ button#clearCart:hover, button#proceedToBilling:hover, button#payNow:hover, butt
   clear: both;
   display: table;
 }
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+
+  .menu-items {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .food-item img {
+    height: 120px;
+  }
+
+  .food-item h3 {
+    font-size: 1.1rem;
+  }
+
+  header {
+    font-size: 1.3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav button {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-left: 5px;
+  }
+
+  #categoryMenu {
+    padding: 0 5px;
+  }
+
+  .category-btn {
+    padding: 5px 10px;
+    margin: 3px 3px 8px 3px;
+    font-size: 14px;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+
+  input.qty {
+    width: 40px;
+    padding: 4px;
+  }
+
+  button#clearCart, button#proceedToBilling, button#payNow, button#backToCart {
+    padding: 8px 12px;
+    font-size: 14px;
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+
+  #total, #billingTotal {
+    font-size: 1.2rem;
+  }
+}
